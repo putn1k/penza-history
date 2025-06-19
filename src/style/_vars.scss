@@ -1,0 +1,30 @@
+:root {
+  --white: #FCFCFC;
+  --black: #1F1F1F;
+  --black-60: rgba(0, 0, 0, 0.6);
+  --black-75: rgba(0, 0, 0, 0.75);
+  --gray: #8F8F8F;
+  --lightgray: #D0D0D0;
+  --gray-10: #F0F0F0;
+  --blue: #39CAF8;
+  --brown: #993300;
+
+  // other vars
+  --min-site-width: 375px;
+  --max-site-width: 1920px;
+  --max-container-width: 1590px;
+
+  // transitions
+  --duration-default: 0.3s;
+  --duration-fast: 0.15s;
+  --duration-slow: 0.6s;
+}
+
+// scss
+$sm: 540px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1440px;
+$xxl: 1920px;
+$primary-font: "PT Serif";
+$secondary-font: "PT Sans";

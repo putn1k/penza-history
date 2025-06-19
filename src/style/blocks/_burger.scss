@@ -1,0 +1,42 @@
+.burger {
+  @include btn-reset;
+
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+
+  &.is-open {
+    --burger-transform-icon: translateX(-1px);
+    --burger-transform-top: rotate(45deg) translate(-5px, -4px);
+    --burger-transform-mid: rotate(135deg) translate(-33px, -14px);
+    --burger-opacity-mid: 0;
+    --burger-transform-bot: rotate(135deg) translate(-34px, -25px);
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    transition: var(--duration-default) ease-in-out;
+    transition-property: transform;
+    transform: var(--burger-transform-icon, none);
+  }
+
+  &__line {
+    transform-origin: left;
+    transition: var(--duration-default) ease-in-out;
+    transition-property: transform, opacity;
+  }
+
+  &__line--top {
+    transform: var(--burger-transform-top, none);
+  }
+
+  &__line--mid {
+    transform: var(--burger-transform-mid, none);
+    opacity: var(--burger-opacity-mid, none);
+  }
+
+  &__line--bot {
+    transform: var(--burger-transform-bot, none);
+  }
+}

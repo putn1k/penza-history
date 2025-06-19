@@ -1,0 +1,28 @@
+.main-hero {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--black);
+  background-image: url('../img/static/tarhany.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-image: fill 0 linear-gradient(var(--black-60) 0, var(--black-60) 100%);
+  min-height: 500px;
+
+  &__descr {
+    @include crop-offset;
+
+    font-size: 1.8rem;
+  }
+
+  @include media-min ($lg) {
+    min-height: 700px;
+
+    &__descr {
+      font-size: 2rem;
+    }
+  }
+}

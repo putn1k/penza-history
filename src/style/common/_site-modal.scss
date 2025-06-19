@@ -1,0 +1,41 @@
+.site-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+
+  &.is-open {
+    @include anim(show-modal, 0.4s);
+
+    display: block;
+  }
+
+  &__content {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    padding: 80px 0;
+    color: var(--black);
+    background-color: var(--white);
+    min-width: var(--min-site-width);
+    overflow-y: auto;
+  }
+
+  @include media-min ($md) {
+    &__content {
+      &--right {
+        @include anim(slide-right-modal, 0.4s);
+
+        left: auto;
+        right: 0;
+        max-width: 460px;
+      }
+    }
+  }
+}

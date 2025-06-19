@@ -1,0 +1,115 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: var(--min-site-width);
+  z-index: 20;
+  color: var(--white);
+  background-color: var(--black-75);
+  padding: 10px 0;
+  padding-right: var(--page-offset-right, 0);
+  border-bottom: 1px solid var(--gray);
+
+  &__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: inline-flex;
+
+    & img {
+      width: 100px;
+      height: 40px;
+      object-fit: contain;
+    }
+  }
+
+  &__burger {
+    margin-left: auto;
+  }
+
+  &__search-btn {
+    display: none;
+  }
+
+  &__search {
+    display: none;
+  }
+
+  @include media-min ($xl) {
+    &__top {
+      justify-content: space-between;
+    }
+
+    &__logo {
+      & img {
+        width: 160px;
+        height: 60px;
+      }
+    }
+
+    &__search-btn {
+      @include btn-reset;
+
+      display: inline-flex;
+
+      @include any-hover {
+        transition: var(--duration-fast) ease-in-out;
+        transition-property: transform;
+
+        &:hover {
+          transform: scale(1.06);
+        }
+      }
+    }
+
+    &__nav {
+      & ul {
+        @include list-reset;
+      }
+
+      & a {
+        text-decoration-color: transparent;
+        text-decoration-thickness: from-font;
+        text-underline-offset: 2px;
+
+        @include any-hover {
+          transition: var(--duration-fast) ease-in-out;
+          transition-property: text-decoration-color;
+
+          &:hover {
+            text-decoration-color: currentColor;
+          }
+        }
+      }
+
+      &>ul {
+        display: flex;
+        align-items: center;
+
+        &>li {
+          padding: 0 15px;
+        }
+      }
+    }
+
+    &__search {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      color: var(--black);
+      background-color: var(--white);
+      border-radius: 4px;
+      width: 460px;
+
+      &.is-show {
+        @include anim(site-search-show, 0.4s);
+
+        display: block;
+      }
+    }
+  }
+}

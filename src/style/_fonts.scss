@@ -1,0 +1,8 @@
+@include font-face($primary-font, "ptserif-regular", 400, normal);
+@include font-face($primary-font, "ptserif-bold", 700, normal);
+@include font-face($primary-font, "ptserif-italic", 400, italic);
+@include font-face($primary-font, "ptserif-bolditalic", 700, italic);
+@include font-face($secondary-font, "ptsans-regular", 400, normal);
+@include font-face($secondary-font, "ptsans-bold", 700, normal);
+@include font-face($secondary-font, "ptsans-italic", 400, italic);
+@include font-face($secondary-font, "ptsans-bolditalic", 700, italic);

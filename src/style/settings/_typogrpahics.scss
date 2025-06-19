@@ -1,0 +1,110 @@
+%base-heading {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+%is-serif {
+  font-family: $primary-font, 'Times New Roman', Times, serif;
+}
+
+%is-sans {
+  font-family: $secondary-font, Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  @extend %is-serif;
+
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--black, #000000);
+  background-color: var(--white, #FFFFFF);
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+.h1 {
+  @extend %base-heading;
+
+  font-size: 3.6rem;
+}
+
+h2,
+.h2 {
+  @extend %base-heading;
+
+  font-size: 2.4rem;
+}
+
+h3,
+.h3 {
+  @extend %base-heading;
+
+  font-size: 2rem;
+}
+
+h4,
+.h4 {
+  @extend %base-heading;
+
+  font-size: 1.8rem;
+}
+
+h5,
+h6,
+.h5,
+.h6 {
+  @extend %base-heading;
+
+  font-size: 1.6rem;
+}
+
+.ft-menu {
+  @extend %base-heading;
+  @extend %is-sans;
+
+  font-size: 1.8rem;
+}
+
+.ft-serif {
+  @extend %is-serif;
+}
+
+.ft-sans {
+  @extend %is-sans;
+}
+
+@include media-min ($lg) {
+
+  h1,
+  .h1 {
+    font-size: 4.8rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 3.2rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 2.4rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 2rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1.8rem;
+  }
+}

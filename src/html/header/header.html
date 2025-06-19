@@ -1,0 +1,55 @@
+<div class="site-header__top">
+  <a class="site-header__logo"
+     href="page-main.html"
+     aria-label="Перейти на главную">
+    <img src="assets/img/logo.svg"
+         width="100"
+         height="40"
+         alt="История Пензенского края">
+  </a>
+  <button class="site-header__burger burger d-xl-none"
+          type="button"
+          data-modal-btn="burger-menu"
+          aria-label="Меню">
+    <svg class="burger__icon"
+         width="40"
+         height="40"
+         viewBox="0 0 40 40"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+      <rect class="burger__line burger__line--top"
+            y="8"
+            width="40"
+            height="3"
+            rx="1.5"
+            fill="#FCFCFC" />
+      <rect class="burger__line burger__line--mid"
+            y="18.5"
+            width="40"
+            height="3"
+            rx="1.5"
+            fill="#FCFCFC" />
+      <rect class="burger__line burger__line--bot"
+            y="29"
+            width="40"
+            height="3"
+            rx="1.5"
+            fill="#FCFCFC" />
+    </svg>
+  </button>
+  <nav class="d-none d-xl-block ft-menu site-header__nav">
+    @include('../common/site-menu.html')
+  </nav>
+  <button class="site-header__search-btn"
+          type="button"
+          aria-label="Поиск">
+    <svg width="30"
+         height="30"
+         aria-hidden="true">
+      <use xlink:href="assets/img/sprite.svg#search"></use>
+    </svg>
+  </button>
+  <seacrh class="site-header__search">
+    @include('../common/searchform.html')
+  </seacrh>
+</div>

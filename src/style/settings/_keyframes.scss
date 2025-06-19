@@ -1,0 +1,33 @@
+@keyframes show-modal {
+  0% {
+    opacity: 0;
+    background-color: transparent;
+  }
+
+  100% {
+    opacity: 1;
+    background-color: var(--black-60);
+  }
+}
+
+@keyframes slide-right-modal {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes site-search-show {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

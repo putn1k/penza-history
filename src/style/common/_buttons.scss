@@ -1,0 +1,58 @@
+.btn {
+  @include btn-reset;
+  @extend %is-sans;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 18px 12px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--black);
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
+
+  @include any-hover {
+    transition: var(--duration-fast) ease-in-out;
+    transition-property: filter;
+
+    &:hover {
+      filter: opacity(0.9);
+    }
+  }
+
+  &.focus-visible {
+    outline: 2px dashed var(--gray);
+    outline-offset: 2px;
+  }
+
+  @include media-min ($lg) {
+    font-size: 1.8rem;
+  }
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.8rem;
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 50%;
+    margin-right: 16px;
+
+    & svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

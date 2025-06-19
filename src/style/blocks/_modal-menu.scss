@@ -1,0 +1,28 @@
+.modal-menu {
+  &__search {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__nav {
+    & ul {
+      @include list-reset;
+    }
+
+    &>ul {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid var(--gray);
+
+      &>li {
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    & a {
+      text-decoration: none;
+    }
+  }
+}

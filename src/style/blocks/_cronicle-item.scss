@@ -1,0 +1,79 @@
+.cronicle-item {
+  padding: 10px 0;
+  border-top: 2px dashed var(--gray);
+  display: flex;
+  align-items: baseline;
+  transition: var(--duration-fast) ease-in-out;
+  transition-property: transform;
+
+
+  &:focus-within {
+    --line-color: currentColor;
+
+    transform: scale(1.04);
+  }
+
+  &__date {
+    margin-right: 10px;
+  }
+
+  &__meta {
+    position: relative;
+    max-width: 600px;
+
+    @include any-hover {
+      &:hover {
+        --line-color: currentColor;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: var(--line-color, transparent);
+    transition: var(--duration-fast) ease-in-out;
+    transition-property: text-decoration-color;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 2px;
+  }
+
+  &__excerpt {
+    color: var(--gray);
+    margin: 0;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__link {
+    &::after {
+      @include full-size;
+
+      content: '';
+    }
+  }
+
+  @include media-min ($lg) {
+    &__date {
+      margin-right: 16px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__date {
+      margin-right: 32px;
+    }
+
+    &__title {
+      font-size: 2.4rem;
+    }
+  }
+}
