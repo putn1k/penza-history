@@ -17,4 +17,8 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+
+  .is-contain {
+    object-fit: contain;
+  }
 }

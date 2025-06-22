@@ -19,6 +19,13 @@ input[type='file'].visually-hidden {
   @include list-reset;
 }
 
+.list-row {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
 .btn-reset {
   @include btn-reset;
 }
@@ -30,4 +37,11 @@ input[type='file'].visually-hidden {
   @include media-min ($xl) {
     overflow: visible;
   }
+}
+
+.is-descriprion {
+  @include crop-offset;
+
+  text-align: justify;
+  text-indent: 3.5rem;
 }

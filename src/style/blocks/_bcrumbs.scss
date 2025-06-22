@@ -1,0 +1,17 @@
+.bcrumbs {
+  @extend %is-sans;
+
+  & a {
+    color: var(--gray);
+    text-decoration-color: transparent;
+
+    @include any-hover {
+      transition: var(--duration-fast) ease-in-out;
+      transition-property: text-decoration-color;
+
+      &:hover {
+        text-decoration-color: currentColor;
+      }
+    }
+  }
+}

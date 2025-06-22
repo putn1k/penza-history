@@ -1,0 +1,115 @@
+.district-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 2), 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include media-min ($md) {
+    --cols: 4;
+  }
+
+  @include media-min ($lg) {
+    --cols: 5;
+  }
+
+  @include media-min ($xl) {
+    gap: 20px;
+  }
+
+  @include media-min ($xxl) {
+    --cols: 6;
+  }
+}
+
+.district-item {
+  position: relative;
+  display: list-item;
+  padding: 10px;
+  text-align: center;
+
+  &__img {
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    text-decoration-color: currentColor;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 4px;
+
+    @include any-hover {
+      &:hover {
+        &::after {
+          box-shadow: 0 3px 20px 2px var(--lightgray);
+        }
+      }
+
+      &.focus-visible {
+        outline: none;
+
+        &::after {
+          outline: 2px dashed var(--gray);
+          outline-offset: 2px;
+        }
+      }
+    }
+
+    &::after {
+      @include full-size;
+
+      content: '';
+      border-radius: 10px;
+      box-shadow: 0 3px 7px 2px var(--lightgray);
+      transition: var(--duration-default) ease-in-out;
+      transition-property: box-shadow;
+
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 16px;
+  }
+
+  @include media-min ($xxl) {
+    font-size: 1.8rem;
+    padding: 24px;
+
+    &__link {
+      text-underline-offset: 5px;
+    }
+  }
+}
+
+.district-symbol {
+  &__img {
+    width: 150px;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 1.8rem;
+    font-style: italic;
+    border-left: 3px solid var(--blue);
+    color: var(--gray);
+    max-width: 600px;
+  }
+
+  @include media-min ($md) {
+    display: flex;
+
+    &__img {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+}
