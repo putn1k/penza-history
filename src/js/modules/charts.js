@@ -37,22 +37,8 @@ const setupChart = ( canvas ) => {
             legend: {
               display: false,
             },
-            title: {
-              display: true,
-              text: ( ctx ) => ctx.chart.canvas.dataset.chartTitle,
-            }
           },
           scales: {
-            x: {
-              border: {
-                display: true
-              },
-              grid: {
-                display: true,
-                drawOnChartArea: true,
-                drawTicks: true,
-              }
-            },
             y: {
               border: {
                 display: true

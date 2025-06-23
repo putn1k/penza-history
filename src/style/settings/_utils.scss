@@ -38,10 +38,3 @@ input[type='file'].visually-hidden {
     overflow: visible;
   }
 }
-
-.is-descriprion {
-  @include crop-offset;
-
-  text-align: justify;
-  text-indent: 3.5rem;
-}

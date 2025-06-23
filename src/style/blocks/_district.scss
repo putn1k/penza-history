@@ -83,33 +83,102 @@
   }
 }
 
-.district-symbol {
-  &__img {
-    width: 150px;
-    margin-bottom: 16px;
-  }
-
-  &__title {
-    margin: 0;
-    margin-bottom: 24px;
-  }
-
-  &__descr {
-    margin: 0;
-    padding-left: 16px;
-    font-size: 1.8rem;
-    font-style: italic;
-    border-left: 3px solid var(--blue);
-    color: var(--gray);
-    max-width: 600px;
-  }
+.location-list-control {
+  display: grid;
+  gap: 16px;
 
   @include media-min ($md) {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
 
-    &__img {
-      margin-right: 30px;
-      margin-bottom: 0;
+    &__search {
+      flex-grow: 1;
+      max-width: 600px;
     }
+
+    &__btn {
+      padding: 14px 12px;
+      flex-shrink: 0;
+      margin-left: 60px;
+      min-width: 200px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__btn {
+      min-width: 230px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__btn {
+      min-width: 290px;
+    }
+  }
+}
+
+.location-list {
+  display: grid;
+  gap: 8px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    border-radius: 4px;
+    color: var(--black);
+    background-color: var(--lightgray);
+
+    @include any-hover {
+      transition: var(--duration-fast) ease-in-out;
+      transition-property: filter;
+
+      &:hover {
+        filter: opacity(0.9);
+      }
+    }
+
+    &.focus-visible {
+      outline: 2px dashed var(--gray);
+      outline-offset: 2px;
+    }
+  }
+
+  @include media-min ($md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-min ($lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-min ($xxl) {
+    gap: 30px;
+
+    &__item {
+      padding: 20px;
+      font-size: 2rem;
+    }
+  }
+}
+
+.location {
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration-thickness: from-font;
+
+  &--no-resident {
+    color: var(--black);
+    text-decoration-line: line-through;
+  }
+
+  &--included {
+    color: var(--brown);
+    text-decoration-line: underline;
+    text-underline-offset: 3px;
   }
 }

@@ -66,6 +66,10 @@ h6,
   font-size: 1.6rem;
 }
 
+.ft-sm {
+  font-size: 1.4rem;
+}
+
 .ft-menu {
   @extend %base-heading;
   @extend %is-sans;
@@ -79,6 +83,33 @@ h6,
 
 .ft-sans {
   @extend %is-sans;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.is-gray {
+  color: var(--gray);
+}
+
+.is-note {
+  padding-left: 16px;
+  font-size: 1.8rem;
+  font-style: italic;
+  border-left: 3px solid var(--blue);
+  color: var(--gray);
+}
+
+.is-descriprion {
+  @include crop-offset;
+
+  text-align: justify;
+  text-indent: 2.5rem;
+
+  @include media-min ($lg) {
+    text-indent: 3.5rem;
+  }
 }
 
 @include media-min ($lg) {

@@ -18,6 +18,10 @@ import {
   initSearchPopup,
 } from './search-popup.js';
 
+import {
+  initShowerLocations,
+} from './location-list.js';
+
 import './modal.js';
 
 const initSiteSettings = () => {
@@ -27,6 +31,7 @@ const initSiteSettings = () => {
   new AcceptCookiePopup();
   [ '[data-gallery]' ].map( ( item ) => baguetteBox.run( item ) );
   initSearchPopup();
+  initShowerLocations();
 };
 
 export {
