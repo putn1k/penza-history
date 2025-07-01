@@ -7,7 +7,7 @@
   transition-property: transform;
 
 
-  &:focus-within {
+  &:focus-within:not(:hover) {
     --line-color: currentColor;
 
     transform: scale(1.04);
