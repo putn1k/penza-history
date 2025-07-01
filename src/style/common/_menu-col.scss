@@ -1,0 +1,26 @@
+.menu-col {
+  & ul {
+    @include list-reset;
+  }
+
+  & a {
+    text-decoration-color: transparent;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 2px;
+
+    @include any-hover {
+      transition: var(--duration-fast) ease-in-out;
+      transition-property: text-decoration-color;
+
+      &:hover {
+        text-decoration-color: currentColor;
+      }
+    }
+  }
+
+  &>ul {
+    &>li {
+      margin-bottom: 20px;
+    }
+  }
+}

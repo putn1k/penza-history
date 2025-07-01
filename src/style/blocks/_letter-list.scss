@@ -1,0 +1,30 @@
+.letter-list {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  gap: 30px;
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration-color: transparent;
+    color: var(--gray);
+    display: inline-block;
+    width: 100%;
+    max-width: 45px;
+    border-radius: 4px;
+
+    &--current {
+      color: var(--black);
+      text-decoration-color: currentColor;
+      text-decoration-thickness: from-font;
+      text-underline-offset: 2px;
+    }
+
+    &.focus-visible {
+      outline: 2px dashed var(--gray);
+      outline-offset: 2px;
+    }
+  }
+}

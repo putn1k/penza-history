@@ -1,0 +1,31 @@
+.toponim-list {
+  @include list-reset;
+
+  display: grid;
+  gap: 20px;
+
+  & li {
+    display: list-item;
+  }
+
+  & a {
+    text-decoration-color: transparent;
+
+    &.focus-visible {
+      outline: 2px dashed var(--gray);
+      outline-offset: 2px;
+    }
+  }
+
+  @include media-min ($md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-min ($lg) {
+    column-gap: 190px;
+  }
+
+  @include media-min ($xl) {
+    column-gap: 30px;
+  }
+}
