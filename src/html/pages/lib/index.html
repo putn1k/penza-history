@@ -1,0 +1,48 @@
+<main class="site__content">
+  <div class="container">
+    @include('../../common/breadcrumbs.html', {path: '<a href="page-main.html">Главная</a>&ensp;&#47;&ensp;', page: 'Историческая библиотка'})
+  </div>
+  <section class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="site__h1">Историческая библиотка</h1>
+          <div class="row mt-5 mb-6">
+            <section class="col-12 col-md-6 mb-2 book-card">
+              <div class="book-card__cover">
+                <img src="assets/img/book-cover.jpg"
+                     alt="">
+              </div>
+              <div class="book-card__meta">
+                <h2 class="book-card__title"><a href="page-book.html">Древности Пензенского края в зеркале топонимики</a></h2>
+                <a class="book-card__link"
+                   href="#"
+                   title="Скачать"
+                   download><span class="visually-hidden">Скачать</span></a>
+              </div>
+            </section>
+            <section class="col-12 col-md-6 mb-2 book-card">
+              <div class="book-card__cover">
+              </div>
+              <div class="book-card__meta">
+                <h2 class="book-card__title"><a href="page-book.html">Древности Пензенского края в зеркале топонимики</a></h2>
+                <a class="book-card__link"
+                   href="#"
+                   title="Скачать"
+                   download><span class="visually-hidden">Скачать</span></a>
+              </div>
+            </section>
+            <section class="col-12 col-md-6 mb-2 book-card">
+              <div class="book-card__cover">
+              </div>
+              <div class="book-card__meta">
+                <h2 class="book-card__title"><a href="page-book.html">Древности Пензенского края в зеркале топонимики</a></h2>
+              </div>
+            </section>
+          </div>
+          @include('../../common/pagination.html')
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

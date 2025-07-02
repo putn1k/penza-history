@@ -1,25 +1,13 @@
-<main class="site__content mt-0 py-0">
-  <section class="main-hero py-6">
+<main class="site__content">
+  <div class="container">
+    @include('../../common/breadcrumbs.html', {path: '<a href="page-main.html">Главная</a>&ensp;&#47;&ensp;', page: 'Хроника портала'})
+  </div>
+  <section class="mt-4">
     <div class="container">
       <div class="row">
-        <h1 class="col-12 col-lg-8 m-0 mb-3">История Пензенского края</h1>
-        <div class="col-12 col-md-9 col-lg-8 col-xl-6 main-hero__descr">
-          <p>Новый дом для старой истории. На этом сайте собрана информация о заселении Пензенского края, его топонимике, а также полезные документы и книги.</p>
-          <p>За основу взяты материалы авторского портала М.С. Полубоярова «Суслоны» с разрешения автора.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="py-6">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-4 col-xxl-3">
-          <h2 class="h2 m-0 mb-3 mb-lg-4">Хроника портала</h2>
-          <a class="btn d-none d-lg-inline-flex"
-             href="page-news.html">Перейти ко всем записям</a>
-        </div>
-        <div class="col-12 col-lg-8 col-xxl-9">
-          <ul class="list-reset mb-5 mb-lg-0">
+        <div class="col-12 col-xl-9">
+          <h1 class="site__h1">Хроника портала</h1>
+          <ul class="list-reset mt-5 mb-6">
             <li class="mb-3">
               <section class="cronicle-item">
                 <time class="cronicle-item__date cronicle-date"
@@ -72,8 +60,7 @@
               </section>
             </li>
           </ul>
-          <a class="btn d-lg-none"
-             href="page-news.html">Перейти ко всем записям</a>
+          @include('../../common/pagination.html')
         </div>
       </div>
     </div>

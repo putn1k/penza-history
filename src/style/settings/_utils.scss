@@ -38,3 +38,23 @@ input[type='file'].visually-hidden {
     overflow: visible;
   }
 }
+
+.is-service-page {
+  position: relative;
+  min-height: 680px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 64px;
+    right: max(15px, calc((100% - var(--max-site-width, 1440px) + 335px) / 2));
+    width: 335px;
+    height: 554px;
+    pointer-events: none;
+    background-image: url('../img/static/monument.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    z-index: -1;
+  }
+}

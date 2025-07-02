@@ -1,0 +1,12 @@
+.article-header {
+  &__date {
+    display: block;
+    text-align: right;
+    font-size: 2rem;
+    color: var(--gray);
+  }
+
+  &__title {
+    margin: 0;
+  }
+}
