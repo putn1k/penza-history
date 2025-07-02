@@ -69,7 +69,6 @@
   ],
   "dependencies": {
     "accept-cookie-popup": "1.2.0",
-    "baguettebox.js": "1.12.0",
     "chart.js": "4.5.0",
     "focus-visible": "5.2.1",
     "normalize.css": "8.0.1",

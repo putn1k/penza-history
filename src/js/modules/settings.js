@@ -1,4 +1,3 @@
-import baguetteBox from 'baguettebox.js';
 import SmoothScroll from 'smooth-scroll';
 import AcceptCookiePopup from 'accept-cookie-popup';
 
@@ -29,7 +28,6 @@ const initSiteSettings = () => {
   initScrollObserver();
   new SmoothScroll( 'a[href*="#"]', smoothScrollConfig );
   new AcceptCookiePopup();
-  [ '[data-gallery]' ].map( ( item ) => baguetteBox.run( item ) );
   initSearchPopup();
   initShowerLocations();
 };
