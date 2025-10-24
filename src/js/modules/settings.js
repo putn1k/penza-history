@@ -18,6 +18,10 @@ import {
 } from './search-popup.js';
 
 import {
+  initSearchLocations
+} from './search-location.js';
+
+import {
   initShowerLocations,
 } from './location-list.js';
 
@@ -30,6 +34,7 @@ const initSiteSettings = () => {
   new AcceptCookiePopup();
   initSearchPopup();
   initShowerLocations();
+  initSearchLocations();
 };
 
 export {
