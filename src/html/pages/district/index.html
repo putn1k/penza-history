@@ -48,7 +48,27 @@
             <p class="m-0 mb-2 is-note">Примечание: название <span class="location location--no-resident">зачеркнуто</span> – из н.п. выехали все жители, название <span class="location location--included">подчеркнуто</span> – н.п. вошел в состав другого населенного пункта</p>
             <div class="location-list-control mb-4">
               <search class="location-list-control__search">
-                @include('../../common/searchform.html')
+                <form class="searchform"
+                      method="get"
+                      id="location-search-form">
+                  <input class="searchform__input"
+                         type="search"
+                         name="s"
+                         autocomplete="off"
+                         placeholder="Что будем искать?">
+                  <div class="searchform__popup">
+                    <div class="searchform__popup-wrapper">
+                      <div class="searchform__popup-content"
+                           id="searchform-result">
+                        <a class="searchform__result"
+                           href="#">Результат поиска</a>
+                        <span class="searchform__result searchform__result--nf">Не найдено</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="searchform__submit"
+                          type="submit">Найти</button>
+                </form>
               </search>
               <button class="btn location-list-control__btn"
                       id="location-show-btn"
@@ -58,51 +78,63 @@
                 id="location-list">
               <li>
                 <a class="location location-list__item location"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li>
                 <a class="location location-list__item location"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li>
                 <a class="location-list__item location location--included"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li>
                 <a class="location-list__item location location--no-resident"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li>
                 <a class="location location-list__item location"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li>
                 <a class="location location-list__item location"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li class="visually-hidden">
                 <a class="location location-list__item location"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li class="visually-hidden">
                 <a class="location location-list__item location"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li class="visually-hidden">
                 <a class="location-list__item location location--included"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li class="visually-hidden">
                 <a class="location-list__item location location--no-resident"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li class="visually-hidden">
                 <a class="location location-list__item location"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
               <li class="visually-hidden">
                 <a class="location location-list__item location"
-                   href="page-location.html">Никольск</a>
+                   href="page-location.html"
+                   data-location>Никольск</a>
               </li>
             </ul>
           </section>
