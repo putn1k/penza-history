@@ -110,6 +110,15 @@ h6,
   @include media-min ($lg) {
     text-indent: 3.5rem;
   }
+
+  & ul,
+  ol {
+    text-indent: 0;
+
+    @include media-min ($lg) {
+      text-indent: 0;
+    }
+  }
 }
 
 @include media-min ($lg) {
